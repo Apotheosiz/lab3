@@ -17,7 +17,7 @@ describe('Random', () => {
 describe('Vowels', () => {
     it('Counts the amount of vowels in word', (done) => {
         var word = 'aeiouyåäö'
-        request.post('http://localhost:3000/api/counter/vowels:word' + word, (err, res, body) => {
+        request.post('http://localhost:3000/api/count_vowels/countmyvowels' + word, (err, res, body) => {
             expect(JSON.parse(body).amountOfVowels).to.equal(9);
             expect('Content-Type', /json/);
             expect(200);
