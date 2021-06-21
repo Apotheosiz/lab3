@@ -5,6 +5,7 @@ const request = require('request');
 describe('Random', () => {
     it('Random number between 0 and 1023', (done) => {
         request.get('http://localhost:3000/api/random', (err, res, body) => {
+            console.log(body)
             expect(JSON.parse(body).number).to.be.within(0, 1023);
             expect('Content-Type', /json/);
             expect(200);
