@@ -6,7 +6,7 @@ const port = 3000;
 // listen on port
 app.listen(port, () => console.info('Listening on port ${port}'));
 
-var addAmmount = 0;
+var addAmount = 0;
 
 // Create a function that displays random number
 function randomNumber(max) {
@@ -41,5 +41,5 @@ app.get('/api/custom_random/:num', (req, res) => {
 
 app.get('/api/counter/add', (req, res) => {
     addAmount++;
-    res.send({ message: 'added 1 to counter' });
+    return res.send({ message: 'added 1 to counter' });
 });

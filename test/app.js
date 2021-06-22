@@ -28,7 +28,8 @@ describe('Vowels', () => {
 
 describe('Number', () => {
     it('Calls a random number', (done) => {
-        request.get('http://localhost:3000/api/counter/:num', (err, res, body) => {
+        request.get('http://localhost:3000/api/custom_random/', (err, res, body) => {
+            console.log(body)
             expect(JSON.parse(body).currentAmount).to.be.a('number');
             expect('Content-Type', /json/);
             expect(200);
